@@ -9,9 +9,9 @@ app.use((req,res,next)=>{
     console.log(`${now}: ${req.method} ${req.url}`);
     next();
 });
-app.use((req,res,next)=>{
-   res.render('maintainence.hbs');
-});
+// app.use((req,res,next)=>{
+//    res.render('maintainence.hbs');
+// });
 app.use(express.static(__dirname + '/html'));
 
 hbs.registerHelper('getCurrYear',()=>{
@@ -27,6 +27,11 @@ app.get('/about',(req,res)=>{
      name:'Uttu'
  });
 });
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+        name:'Uttu'
+    });
+   });
 
 
 app.get('/bad',(req,res)=>{
