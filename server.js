@@ -12,7 +12,7 @@ app.use((req,res,next)=>{
 // app.use((req,res,next)=>{
 //    res.render('maintainence.hbs');
 // });
-app.use(express.static(__dirname + '/html'));
+//app.use(express.static(__dirname + '/html'));
 
 hbs.registerHelper('getCurrYear',()=>{
     return new Date().getFullYear();
